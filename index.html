@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DIC cafe</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="section_inner">
+        <div class="section_title">
+            <h1>Coffee beans for sale</h1>
+        </div>
+    </section>
+
+    <section class="section_inner menu_section">
+        <div class="center">
+            <h1 class="menu_title">Lineup</h1>
+        </div>
+        <ul class="menu_list coffee_menu">
+            <li class="caffee_menu_list_item">
+                <div class="caffee_menu_content">
+                    <h2 class="menu_item_title">Original Blend 200g</h2>
+                    <p class="caffee_menu_price">500 yen</p>
+                </div>
+                <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
+            </li>
+            <li class="caffee_menu_list_item">
+                <div class="caffee_menu_content">
+                    <h2 class="menu_item_title">Original Blend 500g</h2>
+                    <p class="caffee_menu_price">900 yen</p>
+                </div>
+                <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
+            </li>
+            <li class="caffee_menu_list_item">
+                <div class="caffee_menu_content">
+                    <h2 class="menu_item_title">Special Blend 200g</h2>
+                    <p class="caffee_menu_price">700 yen</p>
+                </div>
+                <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
+            </li>
+            <li class="caffee_menu_list_item">
+                <div class="caffee_menu_content">
+                    <h2 class="menu_item_title">Special Blend 500g</h2>
+                    <p class="caffee_menu_price">¥1200</p>
+                </div>
+                <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
+            </li>
+        </ul>
+        <h2>Shipping Information</h2>
+        <ul>
+            <li>・If the total amount is less than 2000 yen, the shipping fee is 500 yen</li>
+            <li>・¥250 for purchases over ¥2000</li>
+            <li>・Free for purchases over 3,000 yen</li>
+        </ul>
+    </section>
+
+    <section class="section_inner">
+        <h2>Orders</h2>
+        <form>
+            <p>Choose a product</p>
+            <div>
+                <select id="product" required>
+                    <option hidden value="0">Please select</option>
+                    <option value="1">Original Blend 200g ¥500</option>
+                    <option value="2">Original Blend 500g ¥900</option>
+                    <option value="3">Special Blend 200g ¥700</option>
+                    <option value="4">Special Blend 500g ¥1200</option>
+                </select>
+                <p>Choose quantity</p>
+                <input type="number" min="1" max="5" id="number" value="0" required>
+            </div>
+            <br>
+            <input type="button" value="Add product" class="btn" onclick="add()" />
+            <input type="button" class="btn" value="Total amount" onclick="calc()" />
+        </form>
+    </section>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>
